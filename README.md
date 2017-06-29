@@ -1,28 +1,34 @@
-# Eg
+# Security test task
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+Temp EgApp
 
-## Development server
+### Quick start
+**Make sure you have Node version >= 5.0 and NPM >= 3**
+> Clone/Download the repo 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+# clone our repo
+# --depth 1 removes all but one .git commit history
+git clone --depth 1 https://github.com/beliyu/egapp
 
-## Code scaffolding
+# change directory to our repo
+cd egapp
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+# install the repo with npm
+npm install
+# Some people prefer yarn ...
 
-## Build
+# start the server
+npm start
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+# start json-server 
+npm run json
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##[AngularClass](https://angularclass.com)
+> Learn AngularJS, Angular 2, and Modern Web Development from the best.
 
-## Running end-to-end tests
+___
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# License
+ [MIT](/LICENSE)

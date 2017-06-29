@@ -1,4 +1,38 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-inverse navbar-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <a class="navbar-brand" href="#">EgApp</a>
+    </div>
+    <div>
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active">Home</a>
+      <a class="navbar-brand" routerLink="/book" routerLinkActive="active"
+        *ngIf="user.group > 0">Book</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <span class="wh" *ngIf="isTok()">{{user.name}}</span>
+        <div class="form-group" >
+          <span [hidden]="isTok()"><input type="text" placeholder="User name" #userT
+            class="form-control" ></span>
+        </div>
+        <!--<div class="form-group">
+          <input type="password" placeholder="Password" class="form-control">
+        </div>-->
+        <button type="submit" class="btn btn-success"
+          (click)="setUser(userT.value)" *ngIf="!isTok()">
+          Log in</button>
+        <button type="submit" class="btn btn-success"
+          (click)="resetUser(); userT.value=''" *ngIf="isTok()">
+          Log out</button>
+      </form>
+    </div>
+  </div>
+</nav>
 <router-outlet></router-outlet>

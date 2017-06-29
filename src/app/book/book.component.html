@@ -1,0 +1,27 @@
+<div class="container">
+
+  <h2>
+    books!
+  </h2>
+  <div class="col-md-6">
+    <table class="table">
+      <tr>
+        <th>#</th>
+        <th>Id</th>
+        <th>Book</th>
+        <th>Year</th>
+      </tr>
+      <tr *ngFor="let w of WM, let i=index">
+        <td>{{i+1}}</td>
+        <td>{{w.id}}</td>
+        <td>{{w.book}}</td>
+        <td>{{w.year}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-md-4 col-md-offset-1" *ngIf="_au.getGroup()>1">
+    <addform-component (buttSub)="whmAdd($event)">
+    </addform-component>
+
+  </div>
+</div>
