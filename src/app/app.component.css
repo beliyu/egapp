@@ -1,3 +1,6 @@
 .wh {
   color: beige;
 }
+.navbar-inverse .navbar-brand {
+    color: #adfdad;
+}
